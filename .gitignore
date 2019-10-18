@@ -1,0 +1,15 @@
+*.dmp
+
+
+/Dump/*
+/WorkSpace/BIN/
+/WorkSpace/DEBUG/
+/WorkSpace/RELEASE/
+/WorkSpace/VS2010/ipch
+/WorkSpace/VS2010/.vs
+*.db
+*.suo
+*.user
+*.filters
+*.sdf
+
