@@ -10,7 +10,7 @@ const int Game::FieldHeight  = 150;
 const int Game::MaxFieldItem = 2048;
 
 const int Game::StartLifes              = 10;
-const int Game::StartHomingRockets      = 5;
+const int Game::StartHomingRockets      = 10;
 const int Game::HomingRocketsLevelBonus = 3;
 
 
@@ -20,13 +20,13 @@ const int Game::PlayerStartX           = FieldWidth / 2 - 1;
 const int Game::PlayerStartY           = FieldHeight - 10;
 const int Game::PlayerShipSpeed        = 70;
 const int Game::EnemyShipSpeed         = 40;
-const int Game::PlayerRocketSpeed      = 100;
-const int Game::EnemyRocketSpeed       = 40;
+const int Game::PlayerRocketSpeed      = 120;
+const int Game::EnemyRocketSpeed       = 50;
 const int Game::PlayerFireSpeed        = 3;
 const int Game::EnemyFireSpeed         = 1;
 const int Game::BangTime               = 400;
-const int Game::EnemyFireChance        = 25;
-const int Game::EnemyCorrectFireChance = 90;
+const int Game::EnemyFireChance        = 45;
+const int Game::EnemyCorrectFireChance = 95;
 
 Game *Game::instance = 0;
 

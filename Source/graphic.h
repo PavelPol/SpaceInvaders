@@ -2,7 +2,7 @@
 #ifndef GRAPHIC_H
 #define GRAPHIC_H
 
-#include <Windows.h>
+#include <windows.h>
 #include <d3d9.h>
 #include <d3dx9mesh.h>
 #include <dxerr.h>
@@ -13,7 +13,7 @@ class Graphic
 {
 public:
     struct CUSTOMVERTEX { FLOAT x, y, z, rhw; DWORD color; };
-    struct TEXCUSTOMVERTEX { FLOAT x, y, z, rhw; DWORD color; float tx,ty; };
+    struct TEXCUSTOMVERTEX { FLOAT x, y, z, rhw; float tx, ty; };
 private:
     // Window
     int wndWidth, 
@@ -25,8 +25,8 @@ private:
     LPDIRECT3DDEVICE9       pDevice;
     LPD3DXFONT              pFont;
     LPDIRECT3DVERTEXBUFFER9 pVertexBuffer;
-    LPDIRECT3DVERTEXBUFFER9 pScreenVertexBuffer;
-    LPDIRECT3DTEXTURE9      pScreen;
+    LPDIRECT3DVERTEXBUFFER9 bgVertexBuffer;
+    LPDIRECT3DTEXTURE9      bgTexture;
 
     int triangleCount;
     std::wstring statusText;
@@ -36,7 +36,8 @@ private:
                         const CUSTOMVERTEX *sourceVertex, CUSTOMVERTEX *vertex, int size);
     bool createWindow();
     void closeWindow();
-    
+    void terminateIfFailed(HRESULT hr);
+    void Graphic::destroy();
 public:
     static const int CellSize;
     
